@@ -1,0 +1,42 @@
+on post-fs-data
+    # metro use this directory
+    mkdir /mnt/vendor/persist/carrier 0750 system system
+
+on fs && property:ro.boot.opcarrier=C303
+    mount overlay overlay /product/app lowerdir=/product/ovl_c303/app:/product/app,context=u:object_r:system_file:s0
+    mount overlay overlay /product/priv-app lowerdir=/product/ovl_c303/priv-app:/product/priv-app,context=u:object_r:system_file:s0
+    mount overlay overlay /product/media lowerdir=/product/ovl_c303/media:/product/media,context=u:object_r:system_file:s0
+    mount overlay overlay /product/overlay lowerdir=/product/ovl_c303/overlay:/product/overlay,context=u:object_r:vendor_overlay_file:s0
+    mount overlay overlay /product/framework lowerdir=/product/ovl_c303/framework:/product/framework,context=u:object_r:system_file:s0
+    mount overlay overlay /product/lib64 lowerdir=/product/ovl_c303/lib64:/product/lib64,context=u:object_r:system_lib_file:s0
+    mount overlay overlay /product/etc lowerdir=/product/ovl_c303/etc:/product/etc
+#    mount overlay overlay /product/bin lowerdir=/product/ovl_c303/bin:/product/bin,context=u:object_r:system_file:s0
+    mount overlay overlay /product/lib lowerdir=/product/ovl_c303/lib:/product/lib,context=u:object_r:system_lib_file:s0
+    mount overlay overlay /system_ext/app lowerdir=/system_ext/ovl_c303/app:/system_ext/app,context=u:object_r:system_file:s0
+    mount overlay overlay /system_ext/priv-app lowerdir=/system_ext/ovl_c303/priv-app:/system_ext/priv-app,context=u:object_r:system_file:s0
+
+on fs && property:ro.boot.opcarrier=tmo
+    mount overlay overlay /product/app lowerdir=/product/ovl_tmo/app:/product/app,context=u:object_r:system_file:s0
+    mount overlay overlay /product/priv-app lowerdir=/product/ovl_tmo/priv-app:/product/priv-app,context=u:object_r:system_file:s0
+    mount overlay overlay /product/media lowerdir=/product/ovl_tmo/media:/product/media,context=u:object_r:system_file:s0
+    mount overlay overlay /product/overlay lowerdir=/product/ovl_tmo/overlay:/product/overlay,context=u:object_r:vendor_overlay_file:s0
+    mount overlay overlay /product/framework lowerdir=/product/ovl_tmo/framework:/product/framework,context=u:object_r:system_file:s0
+    mount overlay overlay /product/lib64 lowerdir=/product/ovl_tmo/lib64:/product/lib64,context=u:object_r:system_lib_file:s0
+    mount overlay overlay /product/etc lowerdir=/product/ovl_tmo/etc:/product/etc
+#    mount overlay overlay /product/bin lowerdir=/product/ovl_tmo/bin:/product/bin,context=u:object_r:system_file:s0
+    mount overlay overlay /product/lib lowerdir=/product/ovl_tmo/lib:/product/lib,context=u:object_r:system_lib_file:s0
+    mount overlay overlay /system_ext/app lowerdir=/system_ext/ovl_tmo/app:/system_ext/app,context=u:object_r:system_file:s0
+    mount overlay overlay /system_ext/priv-app lowerdir=/system_ext/ovl_tmo/priv-app:/system_ext/priv-app,context=u:object_r:system_file:s0
+
+on fs && property:ro.boot.opcarrier=C427
+    mount overlay overlay /product/app lowerdir=/product/ovl_c427/app:/product/app,context=u:object_r:system_file:s0
+    mount overlay overlay /product/priv-app lowerdir=/product/ovl_c427/priv-app:/product/priv-app,context=u:object_r:system_file:s0
+    mount overlay overlay /product/media lowerdir=/product/ovl_c427/media:/product/media,context=u:object_r:system_file:s0
+    mount overlay overlay /product/overlay lowerdir=/product/ovl_c427/overlay:/product/overlay,context=u:object_r:vendor_overlay_file:s0
+    mount overlay overlay /product/framework lowerdir=/product/ovl_c427/framework:/product/framework,context=u:object_r:system_file:s0
+    mount overlay overlay /product/lib64 lowerdir=/product/ovl_c427/lib64:/product/lib64,context=u:object_r:system_lib_file:s0
+    mount overlay overlay /product/etc lowerdir=/product/ovl_c427/etc:/product/etc
+#    mount overlay overlay /product/bin lowerdir=/product/ovl_c427/bin:/product/bin,context=u:object_r:system_file:s0
+    mount overlay overlay /product/lib lowerdir=/product/ovl_c427/lib:/product/lib,context=u:object_r:system_lib_file:s0
+    mount overlay overlay /system_ext/app lowerdir=/system_ext/ovl_c427/app:/system_ext/app,context=u:object_r:system_file:s0
+    mount overlay overlay /system_ext/priv-app lowerdir=/system_ext/ovl_c427/priv-app:/system_ext/priv-app,context=u:object_r:system_file:s0

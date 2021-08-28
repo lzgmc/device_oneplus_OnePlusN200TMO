@@ -1,0 +1,10 @@
+-app/aptxals/aptxals.apk
+-app/aptxui/aptxui.apk
+-framework/WfdCommon.jar
+-framework/qcnvitems.jar
+-framework/tcmclient.jar
+bin/iwpriv
+etc/nfcee_access.xml
+etc/permissions/privapp-permissions-qti.xml
+etc/permissions/vendor.qti.data.factory-V2.1-java.xml
+etc/sysconfig/qti_whitelist.xml
